@@ -1,242 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameZone | Tienda de Juegos</title>
-    <link rel="stylesheet" href="estilo.css">
-
-    <!-- CAMBIAR LAS LETRAS A COLOR BLANCO -->
-    <style>
-        body,
-        h1, h2, h3,
-        p,
-        a,
-        label,
-        span,
-        li,
-        button {
-            color: #ffffff;
-        }
-
-        .price span {
-            color: #ffffff;
-        }
-
-        input {
-            color: #ffffff;
-        }
-
-        input::placeholder {
-            color: #dddddd;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameZone | Tienda de Juegos</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0f0f1a;color:#fff}
+header{background:#1a1a2e;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+header h1{color:#ff7b00}
+nav a{color:#fff;margin-left:20px;text-decoration:none}
+nav a:hover{color:#ff7b00}
+.hero{background:linear-gradient(#0f0f1acc,#0f0f1acc),url('https://images.unsplash.com/photo-1512578047-dfb367046420') center/cover;padding:100px 30px;text-align:center}
+.hero h2{font-size:40px}
+.hero h2 span{color:#ff7b00}
+.hero p{margin:15px 0 25px;color:#ccc}
+.btn{background:#ff7b00;color:#fff;padding:12px 25px;border:none;border-radius:5px;text-decoration:none;margin:5px}
+.btn2{background:#333;color:#fff;padding:12px 25px;border-radius:5px;text-decoration:none;margin:5px}
+section{padding:50px 30px;max-width:1100px;margin:auto}
+h3{color:#ff7b00;margin-bottom:20px;font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#1a1a2e;border-radius:10px;overflow:hidden;text-align:center;padding-bottom:15px}
+.card img{width:100%;height:150px;object-fit:cover}
+.card h4{margin:10px 0}
+.card p{color:#aaa;font-size:14px;margin-bottom:10px}
+footer{background:#1a1a2e;text-align:center;padding:20px;margin-top:40px;color:#aaa}
+</style>
 </head>
-
 <body>
 
-    <!-- ENCABEZADO -->
-    <header class="header" id="inicio">
-        <nav class="menu container">
-            <a href="#inicio" class="logo">🎮 GameZone</a>
+<header>
+<h1>🎮 GAMEZONE</h1>
+<nav>
+<a href="#">Inicio</a>
+<a href="#populares">Populares</a>
+<a href="#juegos">Juegos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
 
-            <input type="checkbox" id="menu">
-            <label for="menu" class="menu-label">☰</label>
+<div class="hero">
+<h2>Encuentra tu juego <span>favorito</span></h2>
+<p>Disfruta de aventura, acción y diversión. Encuentra los mejores juegos en un solo lugar.</p>
+<a href="#juegos" class="btn">Ver Juegos</a>
+<a href="#contacto" class="btn2">Información</a>
+</div>
 
-            <ul class="navbar">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#populares">Populares</a></li>
-                <li><a href="#productos">Juegos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+<section id="populares">
+<h3>🔥 Juegos Populares</h3>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8"><h4>FIFA 26</h4><p>Deportes - $59.99</p><a class="btn" href="#">Comprar</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f"><h4>Call of Duty</h4><p>Acción - $69.99</p><a class="btn" href="#">Comprar</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc"><h4>Minecraft</h4><p>Aventura - $29.99</p><a class="btn" href="#">Comprar</a></div>
+</div>
+</section>
 
-        <div class="header-content container">
-            <div class="header-txt">
-                <h1>Encuentra tu juego <span>favorito</span></h1>
+<section id="juegos">
+<h3>🎮 Todos los Juegos</h3>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e"><h4>Fornite</h4><p>Battle Royale - Gratis</p><a class="btn" href="#">Ver</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f"><h4>God of War</h4><p>Aventura - $49.99</p><a class="btn" href="#">Ver</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1519669556878-63bdad8a1a49"><h4>GTA VI</h4><p>Mundo Abierto - $79.99</p><a class="btn" href="#">Ver</a></div>
+</div>
+</section>
 
-                <p>
-                    Descubre aventuras, acción y diversión.
-                    Encuentra los mejores juegos en un solo lugar.
-                </p>
+<section id="contacto">
+<h3>📩 Contacto</h3>
+<p>¿Tienes dudas? Escríbenos a: contacto@gamezone.com<br>WhatsApp: +591 70000000<br>Oruro, Bolivia</p>
+</section>
 
-                <div class="buttons">
-                    <a href="#productos" class="btn">Ver juegos</a>
-                    <a href="#contacto" class="btn btn-outline">
-                        Información
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- JUEGOS POPULARES -->
-    <section class="popular container" id="populares">
-        <h2>Juegos populares</h2>
-        <p class="section-text">
-            Descubre algunos de los juegos más destacados.
-        </p>
-
-        <div class="popular-content">
-            <img src="images/g1.jpg" alt="Juego popular 1" loading="lazy">
-            <img src="images/g2.jpg" alt="Juego popular 2" loading="lazy">
-            <img src="images/g3.jpg" alt="Juego popular 3" loading="lazy">
-            <img src="images/g4.jpg" alt="Juego popular 4" loading="lazy">
-            <img src="images/g5.jpg" alt="Juego popular 5" loading="lazy">
-            <img src="images/g6.jpg" alt="Juego popular 6" loading="lazy">
-            <img src="images/g7.jpg" alt="Juego popular 7" loading="lazy">
-        </div>
-    </section>
-
-    <!-- CATÁLOGO DE JUEGOS -->
-    <main class="products container" id="productos">
-        <h2>Todos los juegos</h2>
-        <p class="section-text">
-            Explora nuestro catálogo y elige tu próxima aventura.
-        </p>
-
-        <div class="product-content">
-
-            <article class="product-card">
-                <img src="images/l1.jpg" alt="Juego 1" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de aventura</h3>
-                    <p class="description">Explora nuevos mundos.</p>
-                    <div class="price">
-                        <span>Bs. 120</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l2.jpg" alt="Juego 2" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de acción</h3>
-                    <p class="description">Supera cada desafío.</p>
-                    <div class="price">
-                        <span>Bs. 150</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l3.jpg" alt="Juego 3" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de carreras</h3>
-                    <p class="description">Vive la velocidad.</p>
-                    <div class="price">
-                        <span>Bs. 100</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l4.jpg" alt="Juego 4" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de estrategia</h3>
-                    <p class="description">Planifica tu victoria.</p>
-                    <div class="price">
-                        <span>Bs. 180</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l5.jpg" alt="Juego 5" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de aventura</h3>
-                    <p class="description">Una aventura increíble.</p>
-                    <div class="price">
-                        <span>Bs. 130</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l6.jpg" alt="Juego 6" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de combate</h3>
-                    <p class="description">Demuestra tus habilidades.</p>
-                    <div class="price">
-                        <span>Bs. 160</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l7.jpg" alt="Juego 7" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de deportes</h3>
-                    <p class="description">Compite y gana.</p>
-                    <div class="price">
-                        <span>Bs. 110</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l8.jpg" alt="Juego 8" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de supervivencia</h3>
-                    <p class="description">Sobrevive a los retos.</p>
-                    <div class="price">
-                        <span>Bs. 200</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/l9.jpg" alt="Juego 9" loading="lazy">
-                <div class="product-txt">
-                    <h3>Juego de fantasía</h3>
-                    <p class="description">Descubre un mundo mágico.</p>
-                    <div class="price">
-                        <span>Bs. 140</span>
-                        <a href="#contacto" class="btn-buy">Comprar</a>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </main>
-
-    <!-- CONTACTO -->
-    <section class="contact container" id="contacto">
-        <div class="contact-content">
-            <h2>¡Mantente conectado!</h2>
-            <p>Escribe tu correo para recibir información sobre juegos.</p>
-
-            <form action="#" method="get">
-                <input
-                    type="email"
-                    name="correo"
-                    placeholder="Escribe tu correo electrónico"
-                    aria-label="Correo electrónico"
-                    required
-                >
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-        <a href="#inicio" class="logo">🎮 GameZone</a>
-        <p>Tu espacio favorito para descubrir videojuegos.</p>
-        <p class="copyright">© 2026 GameZone | Proyecto educativo</p>
-    </footer>
+<footer>
+<p>© 2026 GAMEZONE - Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
-
-
-
