@@ -1,0 +1,405 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #10111f;
+    color: #f5f5ff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    text-align: center;
+    color: #da1717;
+    margin-bottom: 35px;
+}
+
+/* ENCABEZADO */
+.header {
+    min-height: 530px;
+    background:
+        linear-gradient(rgba(12, 13, 30, 0.80),
+                        rgba(117, 30, 117, 0.829)),
+        url("images/bg.jpg") center/cover no-repeat;
+}
+
+.menu {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo {
+    color: #8b7cff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.navbar a {
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #8b7cff;
+}
+
+#menu,
+.menu-label {
+    display: none;
+}
+
+/* TEXTO PRINCIPAL */
+.header-content {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-txt {
+    max-width: 750px;
+    padding: 45px 0;
+}
+
+.header-txt h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.header-txt h1 span {
+    color: #8b7cff;
+}
+
+.header-txt p {
+    color: #d0d1e4;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: #7865f5;
+    color: #ffffff;
+    border: 2px solid #7865f5;
+    padding: 11px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #5d4bda;
+    border-color: #5d4bda;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: #8b7cff;
+}
+
+/* JUEGOS POPULARES */
+.popular {
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+.popular-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.popular-content img {
+    width: 125px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #30314b;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.popular-content img:hover {
+    transform: translateY(-6px) scale(1.04);
+    border-color: #8b7cff;
+}
+
+/* CATÁLOGO DE PRODUCTOS */
+.products {
+    padding-top: 35px;
+    padding-bottom: 75px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.product-card {
+    background: #1b1c30;
+    border: 1px solid #30314b;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b7cff;
+}
+
+.product-card > img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product-txt {
+    padding: 20px 18px;
+}
+
+.product-txt h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.description {
+    color: #b9bbd1;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #34354e;
+    padding-top: 15px;
+}
+
+.price span {
+    color: #69e6b0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-buy {
+    display: inline-block;
+    background: #7865f5;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background: #5d4bda;
+}
+
+/* CONTACTO */
+.contact {
+    padding-top: 45px;
+    padding-bottom: 60px;
+}
+
+.contact-content {
+    background: #1b1c30;
+    border: 1px solid #30314b;
+    border-radius: 14px;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.contact-content p {
+    color: #b9bbd1;
+    margin: 12px 0 25px;
+}
+
+.contact form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.contact input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 1px solid #454663;
+    border-radius: 8px;
+    background: #10111f;
+    color: #ffffff;
+    outline: none;
+}
+
+.contact input:focus {
+    border-color: #8b7cff;
+}
+
+.contact input::placeholder {
+    color: #9698b1;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+    padding: 35px 20px;
+    background: #0a0b14;
+    text-align: center;
+    border-top: 1px solid #30314b;
+}
+
+.footer p {
+    color: #b9bbd1;
+    margin-top: 10px;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    color: #85869e;
+    margin-top: 18px;
+}
+
+/* TABLETAS */
+@media (max-width: 900px) {
+    .product-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .navbar {
+        gap: 16px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .menu {
+        padding: 18px 0;
+    }
+
+    .menu-label {
+        display: block;
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        padding: 20px 0 5px;
+    }
+
+    #menu:checked ~ .navbar {
+        display: flex;
+    }
+
+    .header {
+        min-height: 450px;
+    }
+
+    .header-content {
+        min-height: 350px;
+    }
+
+    .header-txt p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .popular-content {
+        gap: 12px;
+    }
+
+    .popular-content img {
+        width: 105px;
+        height: 130px;
+    }
+
+    .product-content {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-card > img {
+        height: 220px;
+    }
+
+    .contact form {
+        flex-direction: column;
+    }
+
+    .contact input,
+    .contact form .btn {
+        width: 100%;
+    }
+}
+
